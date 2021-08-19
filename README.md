@@ -6,14 +6,13 @@ After the [CentOS ThinClient](https://github.com/nnleaf/CentOS_ThinClient) proje
 
 ## Instructions
 
-1. Create a VM and install Debian as usual.
-2. Ensure VM is set to static IP on Firewall
-3. SFTP in and transfer over SCRIPT folder to $HOME
-4. SSH into VM and run the following command
-
-`sudo sh $HOME/SCRIPT/start.sh`
-
-5. Proceed with securing VM in documentation
+1. Create a VM and install Debian as usual
+2. Login as initial user
+3. Transfer start.sh to /home/$user/.
+4. SSH into VM
+5. Run the following commands
+`su root`
+`bash /home/$user/start.sh`
 
 ## Upcoming
 
