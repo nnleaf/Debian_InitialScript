@@ -14,13 +14,13 @@
 
 #Add contrib and non-free sources
 sed -i '/deb.debian/d' /etc/apt/sources.list
-echo "deb http://deb.debian.org/debian/ buster main contrib non-free" >> /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian/ buster main contrib non-free" >> /etc/apt/sources.list
-echo "deb http://deb.debian.org/debian/ buster-updates main" >> /etc/apt/sources.list
-echo "deb-src http://deb.debian.org/debian/ buster-updates main" >> /etc/apt/sources.list
+echo "deb http://deb.debian.org/debian/ bullseye main contrib non-free" >> /etc/apt/sources.list
+echo "deb-src http://deb.debian.org/debian/ bullseye main contrib non-free" >> /etc/apt/sources.list
+echo "deb http://deb.debian.org/debian/ bullseye-updates main" >> /etc/apt/sources.list
+echo "deb-src http://deb.debian.org/debian/ bullseye-updates main" >> /etc/apt/sources.list
 sed -i '/security.debian/d' /etc/apt/sources.list
-echo "deb http://security.debian.org/debian-security buster/updates main contrib non-free" >> /etc/apt/sources.list
-echo "deb-src http://security.debian.org/debian-security buster/updates main contrib non-free" >> /etc/apt/sources.list
+echo "deb http://security.debian.org/debian-security bullseye/updates main contrib non-free" >> /etc/apt/sources.list
+echo "deb-src http://security.debian.org/debian-security bullseye/updates main contrib non-free" >> /etc/apt/sources.list
 apt update -y
 
 #Intel microcode
@@ -36,7 +36,7 @@ apt install -y neofetch
 echo "neofetch" >> /etc/bash.bashrc
 
 #VMWare Tools
-echo "deb http://ftp.debian.org/debian/ buster main contrib" >> /etc/apt/sources.list
+echo "deb http://ftp.debian.org/debian/ bullseye main contrib" >> /etc/apt/sources.list
 apt update -y
 apt install -y open-vm-tools
 
