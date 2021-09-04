@@ -57,11 +57,11 @@ updatedb
 apt install -y mc
 
 #Securing SSH
-sed -i '/default value\./ a Protocol 2' /etc/ssh/sshd_config
-sed -i '/default value\./ a PermitEmptyPasswords no' /etc/ssh/sshd_config
-sed -i '/default value\./ a PasswordAuthentication yes' /etc/ssh/sshd_config
-sed -i '/default value\./ a PermitRootLogin no' /etc/ssh/sshd_config
 sed -i '/default value\./ a PrintLastLog yes' /etc/ssh/sshd_config
+sed -i '/default value\./ a PermitRootLogin no' /etc/ssh/sshd_config
+sed -i '/default value\./ a PasswordAuthentication yes' /etc/ssh/sshd_config
+sed -i '/default value\./ a PermitEmptyPasswords no' /etc/ssh/sshd_config
+sed -i '/default value\./ a Protocol 2' /etc/ssh/sshd_config
 systemctl restart sshd
 
 #Fail2Ban
