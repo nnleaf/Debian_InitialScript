@@ -13,6 +13,7 @@
 # 4. bash /home/$user/start.sh
 
 #Add contrib and non-free sources
+sed -i '/deb cdrom/d' /etc/apt/sources.list
 sed -i '/deb.debian/d' /etc/apt/sources.list
 echo "deb http://deb.debian.org/debian/ bullseye main contrib non-free" >> /etc/apt/sources.list
 echo "deb-src http://deb.debian.org/debian/ bullseye main contrib non-free" >> /etc/apt/sources.list
