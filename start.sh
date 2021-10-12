@@ -67,9 +67,9 @@ systemctl restart sshd
 
 #Fail2Ban
 apt install -y fail2ban
-cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
 systemctl start fail2ban
 systemctl enable fail2ban
+cp /etc/fail2ban/fail2ban.conf /etc/fail2ban/fail2ban.local
 
 #UFW
 apt install -y ufw
